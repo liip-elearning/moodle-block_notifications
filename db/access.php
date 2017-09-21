@@ -7,7 +7,7 @@
  * @author 		Andrea Mancino <andreamancino2@gmail.com>
  */
 
-defined('MOODLE_INTERNALS') || die();
+defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
 
@@ -16,9 +16,9 @@ $capabilities = array(
     	'riskbitmask' => RISK_SPAM,
 
 		'captype' => 'write',
-		'contextlevel' => CONTEXT_BLOCK,
+		'contextlevel' => CONTEXT_SYSTEM,
         'archetypes' => array(
-        	'editingteacher' => CAP_ALLOW
+        	'editingteacher' => CAP_ALLOW,
             'manager' => CAP_ALLOW
         ),
 
@@ -32,11 +32,16 @@ $capabilities = array(
     	'riskbitmask' => RISK_SPAM,
 
         'captype' => 'write',
-        'contextlevel' => CONTEXT_BLOCK,
-        'archetypes' => array(
-        	'editingteacher' => CAP_ALLOW,
-        	'manager' => CAP_ALLOW
-        ),
+        'contextlevel' => CONTEXT_SYSTEM,
+        'archetypes' => array(),
+    ),
+
+    // Whether or not a user can see the block
+    'block/notifications:view' => array(
+    	'riskbitmask' => RISK_SPAM,
+    	'captype' => 'read',
+    	'contextlevel' => CONTEXT_BLOCK,
+    	'archetypes' => array()
     ),
 
 );
