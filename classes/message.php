@@ -27,20 +27,17 @@ abstract class message {
 
     public $user;
 
-    public function __construct($userid)
-    {
+    public function __construct($userid) {
         $this->user = static::get_user($userid);
     }
 
-    public static function get_user_id_by_url()
-    {
+    public static function get_user_id_by_url() {
         global $PAGE, $USER;
         parse_str($PAGE->url->get_query_string(), $params);
         return (empty($params['id'])) ? $USER->id : $params['id'];
     }
 
-    public static function get_user($userid)
-    {
+    public static function get_user($userid) {
         global $DB;
         return $DB->get_record('user', array('id' => $userid));
     }

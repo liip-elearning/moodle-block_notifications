@@ -30,8 +30,7 @@ require_once($CFG->dirroot . '/user/lib.php');
 
 class signup_message extends message {
 
-    public function send()
-    {
+    public function send() {
         send_confirmation_email($this->user);
     }
 
