@@ -43,7 +43,7 @@ class block_notifications extends block_list {
             return $this->content;
         }
 
-        // ottengo l'id dell'utente
+        // Obtain user id.
         $id = \block_notifications\message::get_user_id_by_url();
 
         $this->content        = new stdClass;

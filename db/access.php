@@ -50,7 +50,7 @@ $capabilities = array(
         'archetypes' => array(),
     ),
 
-    // Whether or not a user can see the block
+    // Whether or not a user can see the block.
     'block/notifications:view' => array(
         'riskbitmask' => RISK_SPAM,
         'captype' => 'read',
