@@ -21,6 +21,8 @@
  * @author         Andrea Mancino <andreamancino2@gmail.com>
  */
 
+defined('MOODLE_INTERNAL') || die();
+
 class block_notifications extends block_list {
 
     public function init() {
