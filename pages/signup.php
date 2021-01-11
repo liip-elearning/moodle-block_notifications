@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @package		block_notifications
- * @author 		Andrea Mancino <andreamancino2@gmail.com>
+ * @package        block_notifications
+ * @author         Andrea Mancino <andreamancino2@gmail.com>
  */
 
 require_once('../../../config.php');
@@ -11,7 +11,7 @@ $context = context_system::instance();
 
 require_login();
 if (!is_siteadmin()) {
-	return '';
+    return '';
 }
 
 $PAGE->set_context($context);

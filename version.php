@@ -3,8 +3,8 @@
 /**
  * Version details
  *
- * @package		block_notifications
- * @author 		Andrea Mancino <andreamancino2@gmail.com>
+ * @package        block_notifications
+ * @author         Andrea Mancino <andreamancino2@gmail.com>
  */
 
 defined('MOODLE_INTERNAL') || die();

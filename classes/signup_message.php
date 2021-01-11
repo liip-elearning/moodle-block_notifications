@@ -1,8 +1,8 @@
 <?php
 
 /**
- * @package 	block_notifications
- * @author 		Andrea Mancino <andreamancino2@gmail.com>
+ * @package     block_notifications
+ * @author         Andrea Mancino <andreamancino2@gmail.com>
  */
 
 namespace block_notifications;
@@ -15,9 +15,9 @@ require_once($CFG->dirroot . '/user/lib.php');
 
 class signup_message extends message {
 
-	public function send()
-	{
-		send_confirmation_email($this->user);
-	}
+    public function send()
+    {
+        send_confirmation_email($this->user);
+    }
 
 }
