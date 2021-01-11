@@ -21,11 +21,11 @@ $PAGE->set_pagelayout('admin');
 $PAGE->set_title(get_string('pluginname', 'block_notifications'));
 $PAGE->navbar->add(get_string('pluginname', 'block_notifications'));
 
-$user_id = \block_notifications\message::get_user_id_by_url();
-$message = new \block_notifications\signup_message($user_id);
+$userid = \block_notifications\message::get_user_id_by_url();
+$message = new \block_notifications\signup_message($userid);
 $message->send();
 
-redirect(new \moodle_url('/user/profile.php?id='.$user_id), 'Email reinviata a '.$message->user->email);
+redirect(new \moodle_url('/user/profile.php?id='.$userid), 'Email reinviata a '.$message->user->email);
 
 
 

@@ -13,9 +13,9 @@ abstract class message {
 
     public $user;
 
-    public function __construct($user_id)
+    public function __construct($userid)
     {
-        $this->user = static::get_user($user_id);
+        $this->user = static::get_user($userid);
     }
 
     public static function get_user_id_by_url()
@@ -25,10 +25,10 @@ abstract class message {
         return (empty($params['id'])) ? $USER->id : $params['id'];
     }
 
-    public static function get_user($user_id)
+    public static function get_user($userid)
     {
         global $DB;
-        return $DB->get_record('user', array('id' => $user_id));
+        return $DB->get_record('user', array('id' => $userid));
     }
 
 }
